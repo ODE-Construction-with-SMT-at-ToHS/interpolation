@@ -1,3 +1,4 @@
 .idea
 venv
 interpolation/__pycache__
+interpolation/samples
