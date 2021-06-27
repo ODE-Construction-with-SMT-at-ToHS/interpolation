@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions module &#8212; interpolation  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="interpolation" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-interpolation.functions">
+<span id="functions-module"></span><h1>functions module<a class="headerlink" href="#module-interpolation.functions" title="Permalink to this headline">¶</a></h1>
+<p>This module contains classes for functions which the MLP can learn.</p>
+<dl class="py class">
+<dt id="interpolation.functions.LinearA">
+<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">LinearA</code><a class="headerlink" href="#interpolation.functions.LinearA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for the linear function <span class="math notranslate nohighlight">\(f: \in \mathbb{R} \rightarrow \mathbb{R}, f(x) = x-2\)</span></p>
+<dl class="py method">
+<dt id="interpolation.functions.LinearA.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.LinearA.f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="interpolation.functions.LinearA.name">
+<code class="sig-name descname">name</code><em class="property"> = 'LinearA'</em><a class="headerlink" href="#interpolation.functions.LinearA.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="interpolation.functions.LinearA2D">
+<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">LinearA2D</code><a class="headerlink" href="#interpolation.functions.LinearA2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for the linear function <span class="math notranslate nohighlight">\(f: \in \mathbb{R}^2 \rightarrow \mathbb{R}^2, f(x) = \begin{bmatrix} -0.1 &amp; -1.0 \\ 1.0 &amp; -0.1 \end{bmatrix} \cdot x\)</span></p>
+<dl class="py method">
+<dt id="interpolation.functions.LinearA2D.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.LinearA2D.f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="interpolation.functions.LinearA2D.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Linear2DA'</em><a class="headerlink" href="#interpolation.functions.LinearA2D.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="interpolation.functions.QuadraticA">
+<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">QuadraticA</code><a class="headerlink" href="#interpolation.functions.QuadraticA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for the quadratic function <span class="math notranslate nohighlight">\(f: \in \mathbb{R} \rightarrow \mathbb{R}, f(x) = (x-3)^2 + 1\)</span></p>
+<dl class="py method">
+<dt id="interpolation.functions.QuadraticA.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.QuadraticA.f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="interpolation.functions.QuadraticA.name">
+<code class="sig-name descname">name</code><em class="property"> = 'QuadraticA'</em><a class="headerlink" href="#interpolation.functions.QuadraticA.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="interpolation.functions.QuadraticB">
+<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">QuadraticB</code><a class="headerlink" href="#interpolation.functions.QuadraticB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for the quadratic function <span class="math notranslate nohighlight">\(f: \in \mathbb{R} \rightarrow \mathbb{R}, f(x) = (x-1)^2 \cdot 0.3 - 1\)</span></p>
+<dl class="py method">
+<dt id="interpolation.functions.QuadraticB.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.QuadraticB.f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="interpolation.functions.QuadraticB.name">
+<code class="sig-name descname">name</code><em class="property"> = 'QuadraticB'</em><a class="headerlink" href="#interpolation.functions.QuadraticB.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">interpolation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">interpolation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">functions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">sampling module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">interpolation</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">interpolation</a></li>
+      <li>Next: <a href="main.html" title="next chapter">main module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, László Dirks, Nicolai Radke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/functions.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
