@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>plot3d module &#8212; regression  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="linear module" href="linear.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-regression.plot3d">
+<span id="plot3d-module"></span><h1>plot3d module<a class="headerlink" href="#module-regression.plot3d" title="Permalink to this headline">¶</a></h1>
+<p>Plot the distance between pairs of 2D points on a 2D grid in 3D.</p>
+<dl class="py function">
+<dt id="regression.plot3d.plot_dist_map">
+<code class="sig-prename descclassname">regression.plot3d.</code><code class="sig-name descname">plot_dist_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x_test</span></em>, <em class="sig-param"><span class="n">y_test</span></em>, <em class="sig-param"><span class="n">y_prediction</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.plot3d.plot_dist_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the distance between pairs of 2D points on a 2D grid in 3D.</p>
+<p>This module can be used to plot the (2 norm) distance between two points <span class="math notranslate nohighlight">\(y, y' \in \mathbb{R}^2\)</span> for a given
+grid (<span class="math notranslate nohighlight">\(\subset \mathbb{R}^2\)</span>) of pairs. Its aim is to visualize the prediction error of an model trained on a
+function <span class="math notranslate nohighlight">\(f \in \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> with input <span class="math notranslate nohighlight">\(x \in \mathbb{R}^2\)</span> and output
+<span class="math notranslate nohighlight">\(y' \in \mathbb{R}^2\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_test</strong> – (n,2)-array; list of all points <code class="docutils literal notranslate"><span class="pre">x_test[i]</span></code> <span class="math notranslate nohighlight">\(\in \mathbb{R}^2\)</span> in the grid. (inputs for the MLP)</p></li>
+<li><p><strong>y_test</strong> – (n,2)-array; list of all points <code class="docutils literal notranslate"><span class="pre">y_test[i]</span> <span class="pre">=</span> <span class="pre">f(x_test[i])</span></code> <span class="math notranslate nohighlight">\(\in \mathbb{R}^2\)</span>, where <code class="docutils literal notranslate"><span class="pre">f</span></code> is the
+function on which the MLP was trained</p></li>
+<li><p><strong>y_prediction</strong> – (n,2)-array; list of all points <code class="docutils literal notranslate"><span class="pre">y_prediction[i]</span></code> <span class="math notranslate nohighlight">\(\in \mathbb{R}^2\)</span>, where <code class="docutils literal notranslate"><span class="pre">y_prediction[i]</span> <span class="pre">is</span> <span class="pre">the</span>
+<span class="pre">prediction</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">MLP</span> <span class="pre">trained</span> <span class="pre">on</span> <span class="pre">``f</span></code> for input <code class="docutils literal notranslate"><span class="pre">x_test[i]</span></code></p></li>
+<li><p><strong>name</strong> – name of the function <code class="docutils literal notranslate"><span class="pre">f</span></code> on which the MLP was trained, used to name the file in which the visualization is
+saved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">regression</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">regression</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="readme_link.html">README</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">functions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">sampling module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear.html">linear module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plot3d module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">regression</a><ul>
+      <li>Previous: <a href="linear.html" title="previous chapter">linear module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, László Dirks, Nicolai Radke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/plot3d.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
