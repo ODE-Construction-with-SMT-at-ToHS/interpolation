@@ -1,7 +1,7 @@
 sampling module
 ===============
 
-.. automodule:: interpolation.sampling
+.. automodule:: regression.sampling
    :members:
    :undoc-members:
    :show-inheritance:

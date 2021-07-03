@@ -1,7 +1,7 @@
 functions module
 ================
 
-.. automodule:: interpolation.functions
+.. automodule:: regression.functions
    :members:
    :undoc-members:
    :show-inheritance:
