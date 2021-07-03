@@ -8,3 +8,5 @@ regression
    functions
    main
    sampling
+   linear
+   plot3d
