@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sampling module &#8212; interpolation  documentation</title>
+    <title>sampling module &#8212; regression  documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -32,16 +32,16 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="module-interpolation.sampling">
-<span id="sampling-module"></span><h1>sampling module<a class="headerlink" href="#module-interpolation.sampling" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-regression.sampling">
+<span id="sampling-module"></span><h1>sampling module<a class="headerlink" href="#module-regression.sampling" title="Permalink to this headline">¶</a></h1>
 <p>This module contains functions to</p>
 <ul class="simple">
 <li><p>take samples from a given function and store the samples in a file</p></li>
 <li><p>load saved samples for a given function</p></li>
 </ul>
 <dl class="py function">
-<dt id="interpolation.sampling.load_samples">
-<code class="sig-prename descclassname">interpolation.sampling.</code><code class="sig-name descname">load_samples</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func_class</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.sampling.load_samples" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.sampling.load_samples">
+<code class="sig-prename descclassname">regression.sampling.</code><code class="sig-name descname">load_samples</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func_class</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.sampling.load_samples" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load saved samples of the specified <code class="docutils literal notranslate"><span class="pre">func_class</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -57,8 +57,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="interpolation.sampling.sample_1d">
-<code class="sig-prename descclassname">interpolation.sampling.</code><code class="sig-name descname">sample_1d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func_class</span></em>, <em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">interval</span></em>, <em class="sig-param"><span class="n">scatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.sampling.sample_1d" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.sampling.sample_1d">
+<code class="sig-prename descclassname">regression.sampling.</code><code class="sig-name descname">sample_1d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func_class</span></em>, <em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">interval</span></em>, <em class="sig-param"><span class="n">scatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.sampling.sample_1d" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function takes <code class="docutils literal notranslate"><span class="pre">size</span></code> samples of the function <code class="docutils literal notranslate"><span class="pre">func_class</span></code>
 <span class="math notranslate nohighlight">\(\in \mathbb{R} \rightarrow \mathbb{R}\)</span> within <code class="docutils literal notranslate"><span class="pre">interval</span></code>. It also scatters the function values (normally
 distributed) according to <code class="docutils literal notranslate"><span class="pre">scatter</span></code>. Then, it divides the samples into training and test samples and stores
@@ -76,8 +76,8 @@ everything in a file in the folder <code class="docutils literal notranslate"><s
 </dd></dl>
 
 <dl class="py function">
-<dt id="interpolation.sampling.sample_2d">
-<code class="sig-prename descclassname">interpolation.sampling.</code><code class="sig-name descname">sample_2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func_class</span></em>, <em class="sig-param"><span class="n">x1_size</span></em>, <em class="sig-param"><span class="n">x2_size</span></em>, <em class="sig-param"><span class="n">x1_interval</span></em>, <em class="sig-param"><span class="n">x2_interval</span></em>, <em class="sig-param"><span class="n">scatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.sampling.sample_2d" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.sampling.sample_2d">
+<code class="sig-prename descclassname">regression.sampling.</code><code class="sig-name descname">sample_2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func_class</span></em>, <em class="sig-param"><span class="n">x1_size</span></em>, <em class="sig-param"><span class="n">x2_size</span></em>, <em class="sig-param"><span class="n">x1_interval</span></em>, <em class="sig-param"><span class="n">x2_interval</span></em>, <em class="sig-param"><span class="n">scatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.sampling.sample_2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function takes <code class="docutils literal notranslate"><span class="pre">x1_size</span></code> * <code class="docutils literal notranslate"><span class="pre">x2_size</span></code> samples of the function <code class="docutils literal notranslate"><span class="pre">func_class</span></code>
 <span class="math notranslate nohighlight">\(\in \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> within <code class="docutils literal notranslate"><span class="pre">x1_interval</span></code> <span class="math notranslate nohighlight">\(\times\)</span> <code class="docutils literal notranslate"><span class="pre">x2_interval</span></code>.
 It also scatters the function values (normally distributed) according to <code class="docutils literal notranslate"><span class="pre">scatter</span></code>. Then, it divides the samples
@@ -105,7 +105,7 @@ into training and test samples and stores everything in a file in the folder <co
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">interpolation</a></h1>
+<h1 class="logo"><a href="index.html">regression</a></h1>
 
 
 
@@ -117,7 +117,8 @@ into training and test samples and stores everything in a file in the folder <co
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">interpolation</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">regression</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="readme_link.html">README</a></li>
 <li class="toctree-l2"><a class="reference internal" href="functions.html">functions module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">sampling module</a></li>
@@ -129,7 +130,7 @@ into training and test samples and stores everything in a file in the folder <co
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">interpolation</a><ul>
+  <li><a href="modules.html">regression</a><ul>
       <li>Previous: <a href="main.html" title="previous chapter">main module</a></li>
   </ul></li>
   </ul></li>

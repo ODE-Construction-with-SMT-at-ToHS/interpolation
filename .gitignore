@@ -2,3 +2,4 @@
 venv
 interpolation/__pycache__
 interpolation/samples
+regression/__pycache__

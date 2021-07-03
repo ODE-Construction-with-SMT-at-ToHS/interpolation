@@ -1,7 +1,7 @@
 main module
 ===========
 
-.. automodule:: interpolation.main
+.. automodule:: regression.main
    :members:
    :undoc-members:
    :show-inheritance:

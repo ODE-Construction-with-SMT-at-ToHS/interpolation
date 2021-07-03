@@ -1,4 +1,4 @@
-interpolation
+regression
 =============
 
 .. toctree::

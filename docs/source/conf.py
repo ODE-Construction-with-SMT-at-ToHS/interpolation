@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath(path_to_root))
 
 # -- Project information -----------------------------------------------------
 
-project = 'interpolation'
+project = 'regression'
 copyright = '2021, László Dirks, Nicolai Radke'
 author = 'László Dirks, Nicolai Radke'
 

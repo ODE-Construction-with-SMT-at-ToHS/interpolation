@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>functions module &#8212; interpolation  documentation</title>
+    <title>functions module &#8212; regression  documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="main module" href="main.html" />
-    <link rel="prev" title="interpolation" href="modules.html" />
+    <link rel="prev" title="README" href="readme_link.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,73 +33,73 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="module-interpolation.functions">
-<span id="functions-module"></span><h1>functions module<a class="headerlink" href="#module-interpolation.functions" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-regression.functions">
+<span id="functions-module"></span><h1>functions module<a class="headerlink" href="#module-regression.functions" title="Permalink to this headline">¶</a></h1>
 <p>This module contains classes for functions which the MLP can learn.</p>
 <dl class="py class">
-<dt id="interpolation.functions.LinearA">
-<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">LinearA</code><a class="headerlink" href="#interpolation.functions.LinearA" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.LinearA">
+<em class="property">class </em><code class="sig-prename descclassname">regression.functions.</code><code class="sig-name descname">LinearA</code><a class="headerlink" href="#regression.functions.LinearA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for the linear function <span class="math notranslate nohighlight">\(f: \in \mathbb{R} \rightarrow \mathbb{R}, f(x) = x-2\)</span></p>
 <dl class="py method">
-<dt id="interpolation.functions.LinearA.f">
-<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.LinearA.f" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.LinearA.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.functions.LinearA.f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="interpolation.functions.LinearA.name">
-<code class="sig-name descname">name</code><em class="property"> = 'LinearA'</em><a class="headerlink" href="#interpolation.functions.LinearA.name" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.LinearA.name">
+<code class="sig-name descname">name</code><em class="property"> = 'LinearA'</em><a class="headerlink" href="#regression.functions.LinearA.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="interpolation.functions.LinearA2D">
-<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">LinearA2D</code><a class="headerlink" href="#interpolation.functions.LinearA2D" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.LinearA2D">
+<em class="property">class </em><code class="sig-prename descclassname">regression.functions.</code><code class="sig-name descname">LinearA2D</code><a class="headerlink" href="#regression.functions.LinearA2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for the linear function <span class="math notranslate nohighlight">\(f: \in \mathbb{R}^2 \rightarrow \mathbb{R}^2, f(x) = \begin{bmatrix} -0.1 &amp; -1.0 \\ 1.0 &amp; -0.1 \end{bmatrix} \cdot x\)</span></p>
 <dl class="py method">
-<dt id="interpolation.functions.LinearA2D.f">
-<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.LinearA2D.f" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.LinearA2D.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.functions.LinearA2D.f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="interpolation.functions.LinearA2D.name">
-<code class="sig-name descname">name</code><em class="property"> = 'Linear2DA'</em><a class="headerlink" href="#interpolation.functions.LinearA2D.name" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.LinearA2D.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Linear2DA'</em><a class="headerlink" href="#regression.functions.LinearA2D.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="interpolation.functions.QuadraticA">
-<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">QuadraticA</code><a class="headerlink" href="#interpolation.functions.QuadraticA" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.QuadraticA">
+<em class="property">class </em><code class="sig-prename descclassname">regression.functions.</code><code class="sig-name descname">QuadraticA</code><a class="headerlink" href="#regression.functions.QuadraticA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for the quadratic function <span class="math notranslate nohighlight">\(f: \in \mathbb{R} \rightarrow \mathbb{R}, f(x) = (x-3)^2 + 1\)</span></p>
 <dl class="py method">
-<dt id="interpolation.functions.QuadraticA.f">
-<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.QuadraticA.f" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.QuadraticA.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.functions.QuadraticA.f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="interpolation.functions.QuadraticA.name">
-<code class="sig-name descname">name</code><em class="property"> = 'QuadraticA'</em><a class="headerlink" href="#interpolation.functions.QuadraticA.name" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.QuadraticA.name">
+<code class="sig-name descname">name</code><em class="property"> = 'QuadraticA'</em><a class="headerlink" href="#regression.functions.QuadraticA.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="interpolation.functions.QuadraticB">
-<em class="property">class </em><code class="sig-prename descclassname">interpolation.functions.</code><code class="sig-name descname">QuadraticB</code><a class="headerlink" href="#interpolation.functions.QuadraticB" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.QuadraticB">
+<em class="property">class </em><code class="sig-prename descclassname">regression.functions.</code><code class="sig-name descname">QuadraticB</code><a class="headerlink" href="#regression.functions.QuadraticB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for the quadratic function <span class="math notranslate nohighlight">\(f: \in \mathbb{R} \rightarrow \mathbb{R}, f(x) = (x-1)^2 \cdot 0.3 - 1\)</span></p>
 <dl class="py method">
-<dt id="interpolation.functions.QuadraticB.f">
-<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#interpolation.functions.QuadraticB.f" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.QuadraticB.f">
+<em class="property">static </em><code class="sig-name descname">f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#regression.functions.QuadraticB.f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="interpolation.functions.QuadraticB.name">
-<code class="sig-name descname">name</code><em class="property"> = 'QuadraticB'</em><a class="headerlink" href="#interpolation.functions.QuadraticB.name" title="Permalink to this definition">¶</a></dt>
+<dt id="regression.functions.QuadraticB.name">
+<code class="sig-name descname">name</code><em class="property"> = 'QuadraticB'</em><a class="headerlink" href="#regression.functions.QuadraticB.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -113,7 +113,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">interpolation</a></h1>
+<h1 class="logo"><a href="index.html">regression</a></h1>
 
 
 
@@ -125,7 +125,8 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">interpolation</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">regression</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="readme_link.html">README</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">functions module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sampling.html">sampling module</a></li>
@@ -137,8 +138,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">interpolation</a><ul>
-      <li>Previous: <a href="modules.html" title="previous chapter">interpolation</a></li>
+  <li><a href="modules.html">regression</a><ul>
+      <li>Previous: <a href="readme_link.html" title="previous chapter">README</a></li>
       <li>Next: <a href="main.html" title="next chapter">main module</a></li>
   </ul></li>
   </ul></li>
