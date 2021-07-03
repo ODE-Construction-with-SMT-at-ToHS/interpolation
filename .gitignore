@@ -1,5 +1,4 @@
 .idea
 venv
-interpolation/__pycache__
-interpolation/samples
 regression/__pycache__
+regression/samples
