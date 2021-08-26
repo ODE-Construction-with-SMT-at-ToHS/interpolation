@@ -1,34 +1,36 @@
 """
 This module is the top-level module to call functions from other modules.
 """
-import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
 from regression.sampling import *
 from regression.functions import *
-from regression.linear import *
-from regression.plot3d import *
+import time
 
 if __name__ == '__main__':
-    # take samples
-    # sample_1d(LinearA, 1000+1, [-10, 10], 0.2)
+    # create singleton
+    func_class = LinearB2D()
 
-    func_class = LinearA2D
+    # sample points
+    sample_nd(func_class, [[-4, 4], [-4, 4]], [100+1, 100+1], 0)
+    # sample_nd(func_class, [[-10, 10]], [1000+1], 0)
+
+    start_time = time.time()
 
     # load samples
     x_samples, y_samples, x_train, x_test, y_train, y_test = load_samples(func_class)
 
-    # do regression and plot error
-    if func_class == LinearA2D:
-        # do regression
-        reg = least_squares_2d(x_train, y_train)
-        # predict y values
-        y_prediction = [numpy.matmul(reg.coef_, x)+ reg.intercept_ for x in x_test]
-        y_prediction = np.array(y_prediction)
-        # plot error
-        plot_dist_map(x_test, y_test, y_prediction, func_class.name)
+    if False:
+        # do polyfit
+        # reshape from (n,1) to (n,)
+        x_train = x_train.reshape((len(x_train,)))
+        y_train = y_train.reshape((len(y_train,)))
+        test = np.polynomial.polynomial.polyfit(x_train, y_train, func_class.degree())
+        print(test)
     else:
-        # do regression
-        reg = least_squares_1d(x_train, y_train)
-        # plot samples and prediction
-        plt.plot(x_samples, y_samples, 'r', x_test, reg.coef_[0][0]*x_test+reg.intercept_[0], '')
-        plt.show()
+        # do linear regression
+        reg = LinearRegression().fit(x_train, y_train)
+        print(reg.coef_)
+
+    end_time = time.time()
+    print('Overall time:', end_time-start_time, 'seconds')

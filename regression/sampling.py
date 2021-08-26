@@ -90,6 +90,38 @@ def sample_2d(func_class, x1_size, x2_size, x1_interval, x2_interval, scatter):
     sample_path = 'samples/' + func_class.name
     np.savez(sample_path, x_samples=x_samples, y_samples=y_samples, x_train=x_train, x_test=x_test, y_train=y_train, y_test=y_test)
 
+def sample_nd(func_class, intervals, sizes, scatter):
+
+
+    if len(intervals) != func_class.dimension():
+        print('Error: dimension of', func_class.name(), 'is', func_class.dimension(), 'but you provided',
+              len(intervals), 'intervals')
+    if len(sizes) != func_class.dimension():
+        print('Error: dimension of', func_class.name(), 'is', func_class.dimension(), 'but you provided',
+              len(sizes), 'sizes')
+    # use intervals and their sizes to create samples for each dimension separately
+    interval_vectors = [np.linspace(intervals[dim][0], intervals[dim][1], sizes[dim]) for dim in range(func_class.dimension())]
+
+    # the array of interval vectors to get an n-dimensional grid
+    x_samples = np.vstack(np.meshgrid(*interval_vectors)).reshape(func_class.dimension(), -1).T
+
+    # calculate y values for x-samples
+    y_samples = [func_class.f(x) for x in x_samples]
+    y_samples = np.array(y_samples)
+
+    # add noise to y-values
+    y_scatter = np.random.normal(0, scatter, y_samples.shape)
+    y_samples = y_samples + y_scatter
+
+    # process samples, divide into test and training data
+    x, y = shuffle(x_samples, y_samples, random_state=0)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+
+    # save samples to file
+    sample_path = 'samples/' + func_class.name()
+    np.savez(sample_path, x_samples=x_samples, y_samples=y_samples, x_train=x_train, x_test=x_test, y_train=y_train,
+             y_test=y_test)
+
 
 def load_samples(func_class):
     """
@@ -101,7 +133,7 @@ def load_samples(func_class):
     Returns:
         (list): List containing ``x_samples``, ``y_samples``, ``x_train``, ``x_test``, ``y_train``, ``y_test`` in that order
     """
-    sample_path = 'samples/' + func_class.name + '.npz'
+    sample_path = 'samples/' + func_class.name() + '.npz'
     samples = np.load(sample_path)
 
     x_samples = samples['x_samples']
